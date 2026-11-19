@@ -28,7 +28,7 @@ export function WhatsAppFloat() {
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
-  const current = ROLES[index];
+  const current: ContactRole = ROLES[index] ?? "vendas";
 
   return (
     <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">

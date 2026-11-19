@@ -10,33 +10,102 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AluguelRouteImport } from './routes/aluguel'
+import { Route as AssistenciaTecnicaRouteImport } from './routes/assistencia-tecnica'
+import { Route as ColetoresRouteImport } from './routes/coletores'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as ImpressorasRouteImport } from './routes/impressoras'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AluguelRoute = AluguelRouteImport.update({
+  id: '/aluguel',
+  path: '/aluguel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AssistenciaTecnicaRoute = AssistenciaTecnicaRouteImport.update({
+  id: '/assistencia-tecnica',
+  path: '/assistencia-tecnica',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ColetoresRoute = ColetoresRouteImport.update({
+  id: '/coletores',
+  path: '/coletores',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpressorasRoute = ImpressorasRouteImport.update({
+  id: '/impressoras',
+  path: '/impressoras',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aluguel': typeof AluguelRoute
+  '/assistencia-tecnica': typeof AssistenciaTecnicaRoute
+  '/coletores': typeof ColetoresRoute
+  '/contato': typeof ContatoRoute
+  '/impressoras': typeof ImpressorasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aluguel': typeof AluguelRoute
+  '/assistencia-tecnica': typeof AssistenciaTecnicaRoute
+  '/coletores': typeof ColetoresRoute
+  '/contato': typeof ContatoRoute
+  '/impressoras': typeof ImpressorasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aluguel': typeof AluguelRoute
+  '/assistencia-tecnica': typeof AssistenciaTecnicaRoute
+  '/coletores': typeof ColetoresRoute
+  '/contato': typeof ContatoRoute
+  '/impressoras': typeof ImpressorasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/aluguel'
+    | '/assistencia-tecnica'
+    | '/coletores'
+    | '/contato'
+    | '/impressoras'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/aluguel'
+    | '/assistencia-tecnica'
+    | '/coletores'
+    | '/contato'
+    | '/impressoras'
+  id:
+    | '__root__'
+    | '/'
+    | '/aluguel'
+    | '/assistencia-tecnica'
+    | '/coletores'
+    | '/contato'
+    | '/impressoras'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AluguelRoute: typeof AluguelRoute
+  AssistenciaTecnicaRoute: typeof AssistenciaTecnicaRoute
+  ColetoresRoute: typeof ColetoresRoute
+  ContatoRoute: typeof ContatoRoute
+  ImpressorasRoute: typeof ImpressorasRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +117,51 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/aluguel': {
+      id: '/aluguel'
+      path: '/aluguel'
+      fullPath: '/aluguel'
+      preLoaderRoute: typeof AluguelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/assistencia-tecnica': {
+      id: '/assistencia-tecnica'
+      path: '/assistencia-tecnica'
+      fullPath: '/assistencia-tecnica'
+      preLoaderRoute: typeof AssistenciaTecnicaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/coletores': {
+      id: '/coletores'
+      path: '/coletores'
+      fullPath: '/coletores'
+      preLoaderRoute: typeof ColetoresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impressoras': {
+      id: '/impressoras'
+      path: '/impressoras'
+      fullPath: '/impressoras'
+      preLoaderRoute: typeof ImpressorasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AluguelRoute: AluguelRoute,
+  AssistenciaTecnicaRoute: AssistenciaTecnicaRoute,
+  ColetoresRoute: ColetoresRoute,
+  ContatoRoute: ContatoRoute,
+  ImpressorasRoute: ImpressorasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

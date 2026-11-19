@@ -304,7 +304,7 @@ function Index() {
             </Button>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[PRINTERS[0], PRINTERS[1], PRINTERS[5], COLLECTORS[0]].map((p, i) => (
+            {[PRINTERS[0], PRINTERS[1], PRINTERS[5], COLLECTORS[0]].filter((p): p is (typeof PRINTERS)[number] => Boolean(p)).map((p, i) => (
               <Reveal key={p.id} delay={i * 80}>
                 <ProductCard product={p} />
               </Reveal>

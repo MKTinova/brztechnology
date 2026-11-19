@@ -64,8 +64,8 @@ function Step({ n, title, children }: { n: number; title: string; children: Reac
 export function QuoteBuilder() {
   const [q, setQ] = useState<QuoteRequest>({
     mode: "alugar",
-    category: CATEGORIES[0],
-    brand: BRAND_OPTIONS[3],
+    category: CATEGORIES[0] ?? "Impressora térmica de mesa",
+    brand: BRAND_OPTIONS[3] ?? "Me indiquem a melhor",
     quantity: 1,
     name: "",
     company: "",
