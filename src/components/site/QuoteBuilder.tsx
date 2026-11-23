@@ -65,7 +65,7 @@ export function QuoteBuilder() {
   const [q, setQ] = useState<QuoteRequest>({
     mode: "alugar",
     category: CATEGORIES[0] ?? "Impressora térmica de mesa",
-    brand: BRAND_OPTIONS[3] ?? "Me indiquem a melhor",
+    brand: BRAND_OPTIONS[4] ?? "Me indiquem a melhor",
     quantity: 1,
     name: "",
     company: "",
