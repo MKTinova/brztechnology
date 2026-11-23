@@ -19,7 +19,7 @@ const CATEGORIES = [
   "Coletor de dados",
   "Etiquetas e ribbons",
 ];
-const BRAND_OPTIONS = ["Zebra", "Honeywell", "Argox", "Me indiquem a melhor"];
+const BRAND_OPTIONS = ["Zebra", "Honeywell", "Argox", "Elgin", "Me indiquem a melhor"];
 
 function Chip({
   active,

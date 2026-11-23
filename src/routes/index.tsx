@@ -38,7 +38,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Impressoras térmicas Zebra, Honeywell e Argox e coletores de dados para logística. Venda, aluguel e assistência técnica com atendimento rápido pelo WhatsApp.",
+          "Impressoras térmicas Zebra, Honeywell, Argox e Elgin e coletores de dados para logística. Venda, aluguel e assistência técnica com atendimento rápido pelo WhatsApp.",
       },
       { property: "og:title", content: "BRZ Technology | Impressoras térmicas e coletores de dados" },
       {
@@ -95,7 +95,7 @@ const SEGMENTS = [
 const FAQS: Faq[] = [
   {
     q: "Vocês trabalham com quais marcas?",
-    a: "Trabalhamos com impressoras térmicas Zebra, Honeywell e Argox, além de coletores de dados Zebra e Honeywell. Se você precisa de outra marca, fale com nosso time de vendas.",
+    a: "Trabalhamos com impressoras térmicas Zebra, Honeywell, Argox e Elgin, além de coletores de dados Zebra e Honeywell. Se você precisa de outra marca, fale com nosso time de vendas.",
   },
   {
     q: "É melhor comprar ou alugar?",
@@ -128,7 +128,7 @@ function Index() {
               <span className="text-brand-gradient">logística sem pausas.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Venda e aluguel de equipamentos Zebra, Honeywell e Argox, com assistência técnica
+              Venda e aluguel de equipamentos Zebra, Honeywell, Argox e Elgin, com assistência técnica
               especializada e atendimento direto pelo WhatsApp.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
@@ -147,7 +147,7 @@ function Index() {
             </div>
             <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-8">
               {[
-                ["3", "marcas líderes"],
+                ["4", "marcas líderes"],
                 ["2", "formas de ter: compra ou aluguel"],
                 ["1", "técnico dedicado no WhatsApp"],
               ].map(([n, l]) => (

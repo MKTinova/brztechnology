@@ -3,7 +3,7 @@ import desktop from "@/assets/printer-desktop.jpg";
 import mobile from "@/assets/printer-mobile.jpg";
 import collector from "@/assets/collector.jpg";
 
-export type Brand = "Zebra" | "Honeywell" | "Argox";
+export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
 
 export type Product = {
@@ -18,7 +18,7 @@ export type Product = {
   modes: Array<"comprar" | "alugar">;
 };
 
-export const BRANDS: Brand[] = ["Zebra", "Honeywell", "Argox"];
+export const BRANDS: Brand[] = ["Zebra", "Honeywell", "Argox", "Elgin"];
 
 export const PRINTERS: Product[] = [
   {
@@ -107,6 +107,17 @@ export const PRINTERS: Product[] = [
     image: desktop,
     summary: "Clássica de mesa, econômica e confiável para o dia a dia.",
     specs: ["Transferência térmica", "203 dpi", "USB"],
+    modes: ["comprar", "alugar"],
+  },
+  {
+    id: "elgin-l42-pro",
+    name: "Elgin L42 Pro",
+    brand: "Elgin",
+    kind: "impressora",
+    type: "Desktop",
+    image: desktop,
+    summary: "Nacional, econômica e fácil de configurar para etiquetas e envios.",
+    specs: ["Térmica direta e transferência", "203 dpi", "USB, serial e rede"],
     modes: ["comprar", "alugar"],
   },
 ];

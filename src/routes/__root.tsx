@@ -88,7 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Venda, aluguel e assistência técnica de impressoras térmicas Zebra, Honeywell e Argox e coletores de dados para logística.",
+          "Venda, aluguel e assistência técnica de impressoras térmicas Zebra, Honeywell, Argox e Elgin e coletores de dados para logística.",
       },
       { name: "author", content: "BRZ Technology" },
       { name: "theme-color", content: "#0b0c0b" },

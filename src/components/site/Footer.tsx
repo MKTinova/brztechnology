@@ -16,7 +16,7 @@ export function Footer() {
             logística, varejo e indústria.
           </p>
           <div className="mt-6 flex flex-wrap gap-2">
-            {["Zebra", "Honeywell", "Argox"].map((b) => (
+            {["Zebra", "Honeywell", "Argox", "Elgin"].map((b) => (
               <span
                 key={b}
                 className="rounded-full border border-border px-3 py-1 text-xs font-medium text-muted-foreground"
@@ -74,7 +74,7 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="container-site flex flex-col items-center justify-between gap-2 py-6 text-xs text-muted-foreground md:flex-row">
           <p>© {new Date().getFullYear()} BRZ Technology. Todos os direitos reservados.</p>
-          <p>Zebra, Honeywell e Argox são marcas de seus respectivos proprietários.</p>
+          <p>Zebra, Honeywell, Argox e Elgin são marcas de seus respectivos proprietários.</p>
         </div>
       </div>
     </footer>
