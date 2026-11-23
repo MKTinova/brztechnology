@@ -73,6 +73,9 @@
   --animate-scan: scan 3.2s ease-in-out infinite;
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-ring: pulse-ring 2.4s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
+  --animate-logo-pulse: logo-pulse 2.8s ease-in-out infinite;
+  --animate-logo-ring: logo-ring 3.4s ease-out infinite;
+  --animate-logo-glow: logo-glow 2.8s ease-in-out infinite;
 }
 
 :root {
@@ -292,5 +295,48 @@
   100% {
     transform: scale(1.6);
     opacity: 0;
+  }
+}
+
+/* Hero brand mark: breathing lime outline, expanding rings, soft glow. */
+@keyframes logo-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 0 1px oklch(0.791 0.179 132.5 / 55%),
+      0 0 26px -6px oklch(0.791 0.179 132.5 / 45%);
+  }
+  50% {
+    transform: scale(1.045);
+    box-shadow:
+      0 0 0 3px oklch(0.791 0.179 132.5 / 90%),
+      0 0 68px -4px oklch(0.791 0.179 132.5 / 80%);
+  }
+}
+
+@keyframes logo-ring {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.65;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+}
+
+@keyframes logo-glow {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
   }
 }
