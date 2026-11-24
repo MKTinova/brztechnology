@@ -1,0 +1,342 @@
+/*
+ * Tailwind v4 entry: config lives here. Keep every @import in this top block.
+ * Web fonts are loaded with <link> in src/routes/__root.tsx.
+ */
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * BRZ Technology design system — black, white and the brand lime green.
+ * Dark-first: the site lives on deep black with "paper" (white) sections for rhythm.
+ */
+
+@theme inline {
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-glow: var(--primary-glow);
+  --color-primary-deep: var(--primary-deep);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-paper: var(--paper);
+  --color-paper-foreground: var(--paper-foreground);
+  --color-paper-muted: var(--paper-muted);
+  --color-paper-border: var(--paper-border);
+  --color-paper-card: var(--paper-card);
+  --color-ink: var(--ink);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --shadow-glow: var(--shadow-glow);
+  --shadow-card: var(--shadow-card);
+
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-scan: scan 3.2s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-ring: pulse-ring 2.4s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
+  --animate-logo-pulse: logo-pulse 2.8s ease-in-out infinite;
+  --animate-logo-ring: logo-ring 3.4s ease-out infinite;
+  --animate-logo-glow: logo-glow 2.8s ease-in-out infinite;
+}
+
+:root {
+  --radius: 0.9rem;
+
+  /* Brand lime: #8DD24D */
+  --brand: oklch(0.791 0.179 132.5);
+
+  --background: oklch(0.13 0.004 145);
+  --foreground: oklch(0.98 0.002 130);
+  --card: oklch(0.17 0.005 145);
+  --card-foreground: oklch(0.98 0.002 130);
+  --popover: oklch(0.17 0.005 145);
+  --popover-foreground: oklch(0.98 0.002 130);
+  --primary: var(--brand);
+  --primary-foreground: oklch(0.16 0.02 140);
+  --primary-glow: oklch(0.86 0.17 128);
+  --primary-deep: oklch(0.62 0.16 135);
+  --secondary: oklch(0.21 0.006 145);
+  --secondary-foreground: oklch(0.98 0.002 130);
+  --muted: oklch(0.2 0.006 145);
+  --muted-foreground: oklch(0.72 0.01 140);
+  --accent: oklch(0.25 0.03 138);
+  --accent-foreground: oklch(0.98 0.002 130);
+  --destructive: oklch(0.65 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(1 0 0 / 9%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: var(--brand);
+  --ink: oklch(0.1 0.003 145);
+
+  /* White "paper" sections */
+  --paper: oklch(0.985 0.004 125);
+  --paper-card: oklch(1 0 0);
+  --paper-foreground: oklch(0.16 0.006 145);
+  --paper-muted: oklch(0.46 0.012 145);
+  --paper-border: oklch(0.16 0.006 145 / 10%);
+
+  --gradient-hero: radial-gradient(ellipse 60% 60% at 75% 40%, oklch(0.791 0.179 132.5 / 22%), transparent 70%),
+    linear-gradient(180deg, oklch(0.11 0.004 145), oklch(0.13 0.004 145));
+  --gradient-brand: linear-gradient(135deg, var(--primary-glow), var(--primary) 50%, var(--primary-deep));
+  --shadow-glow: 0 10px 40px -10px oklch(0.791 0.179 132.5 / 55%);
+  --shadow-card: 0 20px 50px -25px oklch(0 0 0 / 60%);
+
+  --chart-1: var(--brand);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.17 0.005 145);
+  --sidebar-foreground: oklch(0.98 0.002 130);
+  --sidebar-primary: var(--brand);
+  --sidebar-primary-foreground: oklch(0.16 0.02 140);
+  --sidebar-accent: oklch(0.25 0.03 138);
+  --sidebar-accent-foreground: oklch(0.98 0.002 130);
+  --sidebar-border: oklch(1 0 0 / 9%);
+  --sidebar-ring: var(--brand);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: var(--brand);
+    color: var(--primary-foreground);
+  }
+}
+
+@utility container-site {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (min-width: 768px) {
+    padding-inline: 2rem;
+  }
+}
+
+@utility bg-hero {
+  background: var(--gradient-hero);
+}
+
+@utility bg-brand-gradient {
+  background: var(--gradient-brand);
+}
+
+@utility text-brand-gradient {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-grid {
+  background-image:
+    linear-gradient(oklch(1 0 0 / 5%) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 5%) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black, transparent 80%);
+}
+
+@utility bg-grid-paper {
+  background-image:
+    linear-gradient(oklch(0.16 0.006 145 / 5%) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.16 0.006 145 / 5%) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+@utility glass {
+  background: oklch(0.17 0.005 145 / 70%);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+}
+
+@utility card-hover {
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+  &:hover {
+    transform: translateY(-4px);
+    border-color: oklch(0.791 0.179 132.5 / 45%);
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  &[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scan {
+  0%,
+  100% {
+    top: 12%;
+    opacity: 0;
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+  50% {
+    top: 82%;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* Hero brand mark: breathing lime outline, expanding rings, soft glow. */
+@keyframes logo-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 0 1px oklch(0.791 0.179 132.5 / 55%),
+      0 0 26px -6px oklch(0.791 0.179 132.5 / 45%);
+  }
+  50% {
+    transform: scale(1.045);
+    box-shadow:
+      0 0 0 3px oklch(0.791 0.179 132.5 / 90%),
+      0 0 68px -4px oklch(0.791 0.179 132.5 / 80%);
+  }
+}
+
+@keyframes logo-ring {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.65;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+}
+
+@keyframes logo-glow {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
+  }
+}
