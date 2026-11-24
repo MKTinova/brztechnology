@@ -26,7 +26,7 @@ export const Route = createFileRoute("/assistencia-tecnica")({
 const SERVICES = [
   { icon: Printer, title: "Manutenção de impressoras", text: "Limpeza, troca de cabeça de impressão e roletes." },
   { icon: ScanBarcode, title: "Manutenção de coletores", text: "Diagnóstico, bateria, tela e leitor." },
-  { icon: Settings2, title: "Configuração", text: "Drivers, rede, layouts de etiqueta e integração." },
+  { icon: Settings2, title: "Configuração", text: "Drivers, layouts de etiqueta" },
   { icon: Cog, title: "Instalação", text: "Equipamento pronto para sua operação." },
 ];
 
