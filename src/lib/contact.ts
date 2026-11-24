@@ -36,8 +36,12 @@ export function whatsappLink(role: ContactRole, message?: string): string {
   return `https://wa.me/${CONTACTS[role].number}?text=${encodeURIComponent(text)}`;
 }
 
+export const RENTAL_MONTHS = [6, 12, 24, 36, 48] as const;
+export type RentalMonths = (typeof RENTAL_MONTHS)[number];
+
 export type QuoteRequest = {
   mode: "comprar" | "alugar";
+  rentalMonths?: RentalMonths;
   category: string;
   brand: string;
   quantity: number;
@@ -57,6 +61,7 @@ export function buildQuoteMessage(q: QuoteRequest): string {
     `• Marca: ${q.brand}`,
     `• Quantidade: ${q.quantity}`,
   ];
+  if (q.mode === "alugar") lines.push(`• Prazo de aluguel: ${q.rentalMonths ?? RENTAL_MONTHS[0]} meses`);
   if (q.name?.trim()) lines.push(`• Nome: ${q.name.trim()}`);
   if (q.company?.trim()) lines.push(`• Empresa: ${q.company.trim()}`);
   if (q.city?.trim()) lines.push(`• Cidade: ${q.city.trim()}`);

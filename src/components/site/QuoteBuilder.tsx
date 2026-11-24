@@ -3,9 +3,10 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
-import { buildQuoteMessage, whatsappLink, type QuoteRequest } from "@/lib/contact";
+import { buildQuoteMessage, whatsappLink, RENTAL_MONTHS, type QuoteRequest } from "@/lib/contact";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const MODES: Array<{ value: QuoteRequest["mode"]; label: string; hint: string }> = [
@@ -64,6 +65,7 @@ function Step({ n, title, children }: { n: number; title: string; children: Reac
 export function QuoteBuilder() {
   const [q, setQ] = useState<QuoteRequest>({
     mode: "alugar",
+    rentalMonths: RENTAL_MONTHS[0],
     category: CATEGORIES[0] ?? "Impressora térmica de mesa",
     brand: BRAND_OPTIONS[4] ?? "Me indiquem a melhor",
     quantity: 1,
@@ -93,6 +95,27 @@ export function QuoteBuilder() {
               </Chip>
             ))}
           </div>
+          {q.mode === "alugar" && (
+            <div className="space-y-1.5">
+              <Label htmlFor="q-rental-months">Prazo de aluguel</Label>
+              <Select
+                value={String(q.rentalMonths ?? RENTAL_MONTHS[0])}
+                onValueChange={(value) => {
+                  const months = RENTAL_MONTHS.find((option) => String(option) === value);
+                  if (months !== undefined) set("rentalMonths", months);
+                }}
+              >
+                <SelectTrigger id="q-rental-months" className="h-11 sm:max-w-64">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {RENTAL_MONTHS.map((months) => (
+                    <SelectItem key={months} value={String(months)}>{months} meses</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          )}
         </Step>
 
         <Step n={2} title="Qual equipamento?">
