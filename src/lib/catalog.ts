@@ -2,6 +2,7 @@ import industrial from "@/assets/printer-industrial.jpg";
 import desktop from "@/assets/printer-desktop.jpg";
 import mobile from "@/assets/printer-mobile.jpg";
 import collector from "@/assets/collector.jpg";
+import zt411 from "@/assets/printer-zebra-zt411.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -27,7 +28,7 @@ export const PRINTERS: Product[] = [
     brand: "Zebra",
     kind: "impressora",
     type: "Industrial",
-    image: industrial,
+    image: zt411,
     summary: "Robusta para operação contínua em centros de distribuição e indústrias.",
     specs: ["Uso industrial 24/7", "Transferência térmica", "Rede e USB"],
     modes: ["comprar", "alugar"],
