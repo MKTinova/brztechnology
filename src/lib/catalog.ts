@@ -4,6 +4,7 @@ import mobile from "@/assets/printer-mobile.jpg";
 import collector from "@/assets/collector.jpg";
 import zt411 from "@/assets/printer-zebra-zt411.jpg";
 import zd421 from "@/assets/printer-zebra-zd421.jpg";
+import zq521 from "@/assets/printer-zebra-zq521.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -95,7 +96,7 @@ export const PRINTERS: Product[] = [
     brand: "Zebra",
     kind: "impressora",
     type: "Portátil",
-    image: mobile,
+    image: zq521,
     summary: "Impressão em movimento para picking, inventário e entregas.",
     specs: ["Térmica direta", "Bluetooth / Wi-Fi", "Resistente a quedas"],
     modes: ["comprar", "alugar"],
