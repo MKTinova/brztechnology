@@ -5,6 +5,7 @@ import collector from "@/assets/collector.jpg";
 import zt411 from "@/assets/printer-zebra-zt411.jpg";
 import zd421 from "@/assets/printer-zebra-zd421.jpg";
 import zq521 from "@/assets/printer-zebra-zq521.jpg";
+import zd220 from "@/assets/printer-zebra-zd220.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -41,7 +42,7 @@ export const PRINTERS: Product[] = [
     brand: "Zebra",
     kind: "impressora",
     type: "Desktop",
-    image: desktop,
+    image: zd220,
     summary: "Entrada de linha, econômica e simples de operar para etiquetas do dia a dia.",
     specs: ["Térmica direta", "4\" de largura", "203 dpi", "USB"],
     modes: ["comprar", "alugar"],
