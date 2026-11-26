@@ -164,7 +164,7 @@ export const PRINTERS: Product[] = [
   },
   {
     id: "elgin-l42-pro",
-    name: "Elgin L42 Pro",
+    name: "Elgin L42 Pro full",
     brand: "Elgin",
     kind: "impressora",
     type: "Desktop",
