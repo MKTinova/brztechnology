@@ -6,6 +6,7 @@ import zt411 from "@/assets/printer-zebra-zt411.jpg";
 import zd421 from "@/assets/printer-zebra-zd421.jpg";
 import zq521 from "@/assets/printer-zebra-zq521.jpg";
 import zd220 from "@/assets/printer-zebra-zd220.jpg";
+import zq630 from "@/assets/printer-zebra-zq630.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -86,7 +87,7 @@ export const PRINTERS: Product[] = [
     brand: "Zebra",
     kind: "impressora",
     type: "Portátil",
-    image: mobile,
+    image: zq630,
     summary: "Portátil 4\" para impressão em campo, entregas e picking sem fio.",
     specs: ["Térmica direta", "Bluetooth e Wi-Fi", "203 ou 300 dpi", "Bateria PowerPrecision"],
     modes: ["comprar", "alugar"],
