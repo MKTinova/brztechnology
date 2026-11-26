@@ -1,7 +1,6 @@
 import industrial from "@/assets/printer-industrial.jpg";
 import desktop from "@/assets/printer-desktop.jpg";
 import mobile from "@/assets/printer-mobile.jpg";
-import collector from "@/assets/collector.jpg";
 import zt411 from "@/assets/printer-zebra-zt411.jpg";
 import zd421 from "@/assets/printer-zebra-zd421.jpg";
 import zq521 from "@/assets/printer-zebra-zq521.jpg";
@@ -274,17 +273,6 @@ export const COLLECTORS: Product[] = [
     image: ct40,
     summary: "Coletor corporativo resistente para operação o dia inteiro.",
     specs: ["Android", "Tela touch", "Bateria substituível"],
-    modes: ["comprar", "alugar"],
-  },
-  {
-    id: "honeywell-eda51",
-    name: "Honeywell EDA51",
-    brand: "Honeywell",
-    kind: "coletor",
-    type: "Touch",
-    image: collector,
-    summary: "Entrada de linha para inventário, conferência e picking.",
-    specs: ["Android", "Leitor 2D", "Wi-Fi e 4G"],
     modes: ["comprar", "alugar"],
   },
 ];

@@ -47,6 +47,11 @@ describe("catálogo de coletores", () => {
     expect(collectorIds).not.toContain("honeywell-ck65");
   });
 
+  it("não tem mais o Honeywell EDA51, descontinuado", () => {
+    expect(COLLECTORS.some((c) => c.name.includes("EDA51"))).toBe(false);
+    expect(collectorIds).not.toContain("honeywell-eda51");
+  });
+
   it("não repete ids de produtos", () => {
     const all = [...printerIds, ...collectorIds];
     expect(new Set(all).size).toBe(all.length);

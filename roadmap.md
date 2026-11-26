@@ -1,6 +1,6 @@
 # Roadmap — BRZ Technology
 
-- [ ] Pesquisar e adicionar fotos reais aos 19 modelos restantes, preservando as 3 fotos enviadas
+- [x] Fotos reais em todos os modelos do catálogo (13 impressoras + 8 coletores)
 - [ ] Verificar fotos e enquadramento nas páginas de impressoras, coletores e início
 
 - [ ] Conectar brztechnology.com.br (DNS na KingHost) ao projeto e confirmar que o site abre no domínio
