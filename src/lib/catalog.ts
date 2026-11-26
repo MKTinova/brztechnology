@@ -16,6 +16,7 @@ import os214pro from "@/assets/printer-argox-os214pro.jpg";
 import ix4250 from "@/assets/printer-argox-ix4250.jpg";
 import pc42et from "@/assets/printer-honeywell-pc42et.jpg";
 import ck62 from "@/assets/collector-honeywell-ck62.jpg";
+import mc34 from "@/assets/collector-zebra-mc34.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -187,7 +188,7 @@ export const COLLECTORS: Product[] = [
     brand: "Zebra",
     kind: "coletor",
     type: "Com teclado",
-    image: collector,
+    image: mc34,
     summary: "Coletor Android com teclado ou touch para leitura intensa no armazém.",
     specs: ["Android", "Teclado ou tela touch", "Leitor 1D/2D", "Resistência IP65"],
     modes: ["comprar", "alugar"],
