@@ -14,6 +14,7 @@ import pm45 from "@/assets/printer-honeywell-pm45.jpg";
 import l42pro from "@/assets/printer-elgin-l42pro.jpg";
 import os214pro from "@/assets/printer-argox-os214pro.jpg";
 import ix4250 from "@/assets/printer-argox-ix4250.jpg";
+import pc42et from "@/assets/printer-honeywell-pc42et.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -127,7 +128,7 @@ export const PRINTERS: Product[] = [
     brand: "Honeywell",
     kind: "impressora",
     type: "Desktop",
-    image: desktop,
+    image: pc42et,
     summary: "Ótimo custo-benefício para etiquetas de produtos e envios.",
     specs: ["Transferência térmica", "203 dpi", "USB"],
     modes: ["comprar", "alugar"],
