@@ -15,6 +15,7 @@ import l42pro from "@/assets/printer-elgin-l42pro.jpg";
 import os214pro from "@/assets/printer-argox-os214pro.jpg";
 import ix4250 from "@/assets/printer-argox-ix4250.jpg";
 import pc42et from "@/assets/printer-honeywell-pc42et.jpg";
+import ck62 from "@/assets/collector-honeywell-ck62.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -241,7 +242,7 @@ export const COLLECTORS: Product[] = [
     brand: "Honeywell",
     kind: "coletor",
     type: "Com teclado",
-    image: collector,
+    image: ck62,
     summary: "Ultra-robusto com teclado para câmaras frias e ambientes severos.",
     specs: ["Android", "Teclado físico", "Leitor 1D/2D", "Resistência IP66"],
     modes: ["comprar", "alugar"],
