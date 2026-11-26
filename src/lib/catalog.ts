@@ -10,6 +10,7 @@ import zq630 from "@/assets/printer-zebra-zq630.jpg";
 import zd230 from "@/assets/printer-zebra-zd230.jpg";
 import zd621 from "@/assets/printer-zebra-zd621.jpg";
 import rp4 from "@/assets/printer-honeywell-rp4.jpg";
+import pm45 from "@/assets/printer-honeywell-pm45.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -112,7 +113,7 @@ export const PRINTERS: Product[] = [
     brand: "Honeywell",
     kind: "impressora",
     type: "Industrial",
-    image: industrial,
+    image: pm45,
     summary: "Alto volume de etiquetas com tela touch e configuração simples.",
     specs: ["Uso industrial", "Tela touch colorida", "Rede e USB"],
     modes: ["comprar", "alugar"],
