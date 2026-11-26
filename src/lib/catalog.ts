@@ -13,6 +13,7 @@ import rp4 from "@/assets/printer-honeywell-rp4.jpg";
 import pm45 from "@/assets/printer-honeywell-pm45.jpg";
 import l42pro from "@/assets/printer-elgin-l42pro.jpg";
 import os214pro from "@/assets/printer-argox-os214pro.jpg";
+import ix4250 from "@/assets/printer-argox-ix4250.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -148,7 +149,7 @@ export const PRINTERS: Product[] = [
     brand: "Argox",
     kind: "impressora",
     type: "Industrial",
-    image: industrial,
+    image: ix4250,
     summary: "Industrial com ótimo custo para linhas de produção e logística.",
     specs: ["Uso industrial", "Transferência térmica", "Rede e USB"],
     modes: ["comprar", "alugar"],
