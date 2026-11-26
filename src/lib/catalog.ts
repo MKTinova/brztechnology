@@ -18,6 +18,7 @@ import pc42et from "@/assets/printer-honeywell-pc42et.jpg";
 import ck62 from "@/assets/collector-honeywell-ck62.jpg";
 import mc34 from "@/assets/collector-zebra-mc34.jpg";
 import mc3300 from "@/assets/collector-zebra-mc3300.jpg";
+import tc22 from "@/assets/collector-zebra-tc22.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -211,7 +212,7 @@ export const COLLECTORS: Product[] = [
     brand: "Zebra",
     kind: "coletor",
     type: "Touch",
-    image: collector,
+    image: tc22,
     summary: "Formato smartphone com tela grande para varejo, expedição e conferência.",
     specs: ["Android", "Tela touch 6\"", "Leitor 1D/2D", "Wi-Fi e 4G"],
     modes: ["comprar", "alugar"],
