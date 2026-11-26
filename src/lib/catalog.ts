@@ -8,6 +8,7 @@ import zq521 from "@/assets/printer-zebra-zq521.jpg";
 import zd220 from "@/assets/printer-zebra-zd220.jpg";
 import zq630 from "@/assets/printer-zebra-zq630.jpg";
 import zd230 from "@/assets/printer-zebra-zd230.jpg";
+import zd621 from "@/assets/printer-zebra-zd621.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -66,7 +67,7 @@ export const PRINTERS: Product[] = [
     brand: "Zebra",
     kind: "impressora",
     type: "Desktop",
-    image: desktop,
+    image: zd621,
     summary: "Desktop avançado com display colorido e impressão de alta resolução.",
     specs: ["Térmica direta e transferência", "203, 300 ou 600 dpi", "Display colorido", "Wi-Fi opcional"],
     modes: ["comprar", "alugar"],
