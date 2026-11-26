@@ -149,7 +149,7 @@ export const PRINTERS: Product[] = [
   },
   {
     id: "argox-os214-plus",
-    name: "Argox OS-214 Plus",
+    name: "Argox OS-214 Pro",
     brand: "Argox",
     kind: "impressora",
     type: "Desktop",
