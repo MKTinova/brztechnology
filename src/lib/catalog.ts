@@ -21,6 +21,7 @@ import mc3300 from "@/assets/collector-zebra-mc3300.jpg";
 import tc22 from "@/assets/collector-zebra-tc22.jpg";
 import tc21 from "@/assets/collector-zebra-tc21.jpg";
 import tc52 from "@/assets/collector-zebra-tc52.jpg";
+import eda52 from "@/assets/collector-honeywell-eda52.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -258,7 +259,7 @@ export const COLLECTORS: Product[] = [
     brand: "Honeywell",
     kind: "coletor",
     type: "Touch",
-    image: collector,
+    image: eda52,
     summary: "Custo-benefício para inventário, conferência e picking.",
     specs: ["Android", "Tela touch 5,5\"", "Leitor 1D/2D", "Bateria de longa duração"],
     modes: ["comprar", "alugar"],
