@@ -1,13 +1,13 @@
-import zebra from "@/assets/brands/zebra.svg.asset.json";
-import honeywell from "@/assets/brands/honeywell.svg.asset.json";
-import argox from "@/assets/brands/argox.png.asset.json";
-import elgin from "@/assets/brands/elgin.png.asset.json";
+import zebra from "@/assets/brands/zebra.svg";
+import honeywell from "@/assets/brands/honeywell.svg";
+import argox from "@/assets/brands/argox.png";
+import elgin from "@/assets/brands/elgin.png";
 
 const LOGOS = [
-  { name: "Zebra", src: zebra.url, label: false, cls: "" },
-  { name: "Honeywell", src: honeywell.url, label: true, cls: "max-h-8" },
-  { name: "Argox", src: argox.url, label: false, cls: "scale-[2.2]" },
-  { name: "Elgin", src: elgin.url, label: true, cls: "max-h-10" },
+  { name: "Zebra", src: zebra, label: false, cls: "" },
+  { name: "Honeywell", src: honeywell, label: true, cls: "max-h-8" },
+  { name: "Argox", src: argox, label: false, cls: "scale-[2.2]" },
+  { name: "Elgin", src: elgin, label: true, cls: "max-h-10" },
 ];
 
 export function BrandMarquee() {
