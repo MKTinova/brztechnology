@@ -11,6 +11,7 @@ import zd230 from "@/assets/printer-zebra-zd230.jpg";
 import zd621 from "@/assets/printer-zebra-zd621.jpg";
 import rp4 from "@/assets/printer-honeywell-rp4.jpg";
 import pm45 from "@/assets/printer-honeywell-pm45.jpg";
+import l42pro from "@/assets/printer-elgin-l42pro.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -168,7 +169,7 @@ export const PRINTERS: Product[] = [
     brand: "Elgin",
     kind: "impressora",
     type: "Desktop",
-    image: desktop,
+    image: l42pro,
     summary: "Nacional, econômica e fácil de configurar para etiquetas e envios.",
     specs: ["Térmica direta e transferência", "203 dpi", "USB, serial e rede"],
     modes: ["comprar", "alugar"],
