@@ -44,6 +44,11 @@ describe("E-mail channel", () => {
     expect(CONTACTS.vendas.email).not.toBe(CONTACTS.tecnico.email);
   });
 
+  it("uses the real addresses the owner gave: sales and technical support", () => {
+    expect(CONTACTS.vendas.email).toBe("claudinei@brztechnology.com.br");
+    expect(CONTACTS.tecnico.email).toBe("renato@brztechnology.com.br");
+  });
+
   it("opens a mailto draft with a subject and a body", () => {
     const link = emailLink("vendas");
     expect(link.startsWith(`mailto:${CONTACTS.vendas.email}?subject=`)).toBe(true);

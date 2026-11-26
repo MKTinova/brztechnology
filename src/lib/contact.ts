@@ -15,7 +15,7 @@ export const CONTACTS: Record<
   vendas: {
     number: "5519987215847",
     display: "(19) 98721-5847",
-    email: "vendas@brztechnology.com.br",
+    email: "claudinei@brztechnology.com.br",
     label: "Vendas",
     title: "Falar com Vendas",
     description: "Compra, aluguel, orçamentos e indicação do equipamento ideal.",
@@ -23,7 +23,7 @@ export const CONTACTS: Record<
   tecnico: {
     number: "5519995793706",
     display: "(19) 99579-3706",
-    email: "suporte@brztechnology.com.br",
+    email: "renato@brztechnology.com.br",
     label: "Técnico",
     title: "Suporte Técnico",
     description: "Manutenção, configuração, instalação e dúvidas de uso.",

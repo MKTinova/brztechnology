@@ -1,6 +1,3 @@
-import industrial from "@/assets/printer-industrial.jpg";
-import desktop from "@/assets/printer-desktop.jpg";
-import mobile from "@/assets/printer-mobile.jpg";
 import zt411 from "@/assets/printer-zebra-zt411.jpg";
 import zd421 from "@/assets/printer-zebra-zd421.jpg";
 import zq521 from "@/assets/printer-zebra-zq521.jpg";
