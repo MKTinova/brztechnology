@@ -27,7 +27,7 @@ function edge(a: Node, b: Node) {
 
 export function LogoMark({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 240 250" className={cn("h-10 w-auto", className)} aria-hidden="true">
+    <svg viewBox="-4 3 240 240" className={cn("h-10 w-auto", className)} aria-hidden="true">
       <g fill="none" strokeLinecap="round">
         {NODES.map((n, i) => (
           <line key={i} {...edge(CENTER, n)} stroke="currentColor" strokeWidth={12} />

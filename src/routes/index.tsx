@@ -160,30 +160,30 @@ function Index() {
           </Reveal>
 
           <Reveal delay={150} className="relative lg:col-span-6">
-            <div className="relative flex aspect-[4/3] flex-col items-center justify-center overflow-hidden rounded-[2rem] border border-primary/25 bg-hero shadow-card">
+            <div className="relative flex min-h-[24rem] flex-col items-center justify-center overflow-hidden rounded-[2rem] border border-primary/25 bg-hero p-8 pb-16 shadow-card sm:p-10 sm:pb-16">
               <div className="absolute inset-0 bg-grid" />
-              <div className="relative flex flex-col items-center pb-10">
-                <div className="relative grid size-44 place-items-center sm:size-52">
+              <div className="relative flex flex-col items-center">
+                <div className="relative grid size-48 place-items-center sm:size-56">
                   <span className="absolute inset-0 rounded-[1.9rem] border border-primary/40 animate-logo-ring motion-reduce:hidden" />
                   <span className="absolute inset-0 rounded-[1.9rem] border border-primary/28 animate-logo-ring [animation-delay:1.1s] motion-reduce:hidden" />
                   <span className="absolute inset-0 rounded-[1.9rem] border border-primary/18 animate-logo-ring [animation-delay:2.2s] motion-reduce:hidden" />
-                  <span className="absolute inset-0 m-auto size-40 rounded-full bg-primary/30 blur-3xl animate-logo-glow motion-reduce:hidden sm:size-48" />
+                  <span className="absolute inset-0 m-auto size-44 rounded-full bg-primary/30 blur-3xl animate-logo-glow motion-reduce:hidden sm:size-52" />
                   <div className="relative grid size-full place-items-center rounded-[1.75rem] border-2 border-primary/60 bg-ink/85 animate-logo-pulse motion-reduce:animate-none">
-                    <LogoMark className="h-24 text-primary sm:h-28" />
+                    <LogoMark className="h-28 text-primary sm:h-32" />
                   </div>
                 </div>
-                <p className="mt-8 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
+                <p className="mt-7 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
                   BRZ<span className="text-primary">.</span>
                 </p>
-                <p className="mt-2 font-display text-xs font-semibold tracking-[0.38em] text-primary sm:text-sm">
+                <p className="mt-2 pl-[0.38em] font-display text-xs font-semibold tracking-[0.38em] text-primary sm:text-sm">
                   TECHNOLOGY
                 </p>
-                <p className="mt-5 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                <p className="mt-4 pl-[0.2em] text-[0.68rem] font-medium uppercase tracking-[0.2em] text-muted-foreground">
                   Tecnologia em automação de dados
                 </p>
               </div>
             </div>
-            <div className="glass absolute -bottom-6 left-4 flex items-center gap-3 rounded-2xl border border-border p-4 shadow-card animate-float sm:left-[-1.5rem]">
+            <div className="glass absolute -bottom-9 left-4 flex items-center gap-3 rounded-2xl border border-border p-4 shadow-card animate-float sm:left-[-1.5rem]">
               <span className="grid size-11 place-items-center rounded-xl bg-primary text-primary-foreground">
                 <ScanBarcode className="size-5" />
               </span>
