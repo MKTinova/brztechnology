@@ -20,6 +20,7 @@ import mc34 from "@/assets/collector-zebra-mc34.jpg";
 import mc3300 from "@/assets/collector-zebra-mc3300.jpg";
 import tc22 from "@/assets/collector-zebra-tc22.jpg";
 import tc21 from "@/assets/collector-zebra-tc21.jpg";
+import tc52 from "@/assets/collector-zebra-tc52.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -224,7 +225,7 @@ export const COLLECTORS: Product[] = [
     brand: "Zebra",
     kind: "coletor",
     type: "Touch",
-    image: collector,
+    image: tc52,
     summary: "Robusto corporativo para operação intensa em armazém e campo.",
     specs: ["Android", "Tela touch 5\"", "Leitor 1D/2D", "Resistente a quedas"],
     modes: ["comprar", "alugar"],
