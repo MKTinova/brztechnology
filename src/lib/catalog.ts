@@ -17,6 +17,7 @@ import ix4250 from "@/assets/printer-argox-ix4250.jpg";
 import pc42et from "@/assets/printer-honeywell-pc42et.jpg";
 import ck62 from "@/assets/collector-honeywell-ck62.jpg";
 import mc34 from "@/assets/collector-zebra-mc34.jpg";
+import mc3300 from "@/assets/collector-zebra-mc3300.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -199,7 +200,7 @@ export const COLLECTORS: Product[] = [
     brand: "Zebra",
     kind: "coletor",
     type: "Com teclado",
-    image: collector,
+    image: mc3300,
     summary: "Coletor Android com teclado físico para leitura intensa no armazém.",
     specs: ["Android", "Teclado físico", "Leitor 1D/2D"],
     modes: ["comprar", "alugar"],
