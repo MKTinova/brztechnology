@@ -9,6 +9,7 @@ import zd220 from "@/assets/printer-zebra-zd220.jpg";
 import zq630 from "@/assets/printer-zebra-zq630.jpg";
 import zd230 from "@/assets/printer-zebra-zd230.jpg";
 import zd621 from "@/assets/printer-zebra-zd621.jpg";
+import rp4 from "@/assets/printer-honeywell-rp4.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -133,7 +134,7 @@ export const PRINTERS: Product[] = [
     brand: "Honeywell",
     kind: "impressora",
     type: "Portátil",
-    image: mobile,
+    image: rp4,
     summary: "Portátil e resistente para equipes de campo e armazéns.",
     specs: ["Térmica direta", "Bluetooth", "Bateria de longa duração"],
     modes: ["comprar", "alugar"],
