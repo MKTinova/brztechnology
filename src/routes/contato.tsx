@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ContactCards } from "@/components/site/ContactCards";
+import { EmailBand } from "@/components/site/EmailBand";
 import { PageHero } from "@/components/site/PageHero";
 import { QuoteBuilder } from "@/components/site/QuoteBuilder";
 import { Reveal } from "@/components/site/Reveal";
@@ -9,9 +10,9 @@ export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
       { title: "Contato e orçamento | BRZ Technology" },
-      { name: "description", content: "Fale com Vendas ou com o Suporte Técnico da BRZ Technology pelo WhatsApp e peça seu orçamento." },
+      { name: "description", content: "Fale com Vendas ou com o Suporte Técnico da BRZ Technology pelo WhatsApp ou por e-mail e peça seu orçamento." },
       { property: "og:title", content: "Contato e orçamento | BRZ Technology" },
-      { property: "og:description", content: "WhatsApp de Vendas e Suporte Técnico." },
+      { property: "og:description", content: "WhatsApp e e-mail de Vendas e Suporte Técnico." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -39,6 +40,9 @@ function ContactPage() {
             <QuoteBuilder />
           </Reveal>
         </div>
+      </section>
+      <section className="pb-24">
+        <EmailBand />
       </section>
     </>
   );

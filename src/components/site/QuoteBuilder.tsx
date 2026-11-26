@@ -1,4 +1,4 @@
-import { Minus, Plus, Send } from "lucide-react";
+import { Mail, Minus, Plus, Send } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,7 +6,15 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
-import { buildQuoteMessage, whatsappLink, RENTAL_MONTHS, type QuoteRequest } from "@/lib/contact";
+import {
+  buildQuoteMessage,
+  CONTACTS,
+  emailLink,
+  quoteEmailLink,
+  whatsappLink,
+  RENTAL_MONTHS,
+  type QuoteRequest,
+} from "@/lib/contact";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const MODES: Array<{ value: QuoteRequest["mode"]; label: string; hint: string }> = [
@@ -183,10 +191,25 @@ export function QuoteBuilder() {
           </div>
         </Step>
 
-        <Button type="submit" variant="hero" size="xl" className="w-full sm:w-auto">
-          <WhatsAppIcon className="size-5" />
-          Enviar pedido pelo WhatsApp
-        </Button>
+        <div className="flex flex-wrap items-center gap-3">
+          <Button type="submit" variant="hero" size="xl" className="w-full sm:w-auto">
+            <WhatsAppIcon className="size-5" />
+            Enviar pedido pelo WhatsApp
+          </Button>
+          <Button asChild variant="ink" size="xl" className="w-full border border-border sm:w-auto">
+            <a href={quoteEmailLink(q)}>
+              <Mail className="size-5" />
+              Enviar por e-mail
+            </a>
+          </Button>
+        </div>
+        <p className="text-xs text-muted-foreground">
+          Pelo e-mail você recebe a proposta em{" "}
+          <a href={emailLink("vendas")} className="font-semibold text-primary underline-offset-4 hover:underline">
+            {CONTACTS.vendas.email}
+          </a>
+          .
+        </p>
       </form>
 
       <aside className="relative flex flex-col border-t border-border bg-ink p-6 md:p-10 lg:col-span-2 lg:border-l lg:border-t-0">

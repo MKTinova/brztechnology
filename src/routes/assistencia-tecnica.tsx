@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Cog, Printer, ScanBarcode, Settings2 } from "lucide-react";
+import { Cog, Mail, Printer, ScanBarcode, Settings2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CtaBand } from "@/components/site/CtaBand";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
-import { CONTACTS, whatsappLink } from "@/lib/contact";
+import { CONTACTS, emailLink, whatsappLink } from "@/lib/contact";
 import technicianImg from "@/assets/technician.jpg";
 
 export const Route = createFileRoute("/assistencia-tecnica")({
@@ -36,13 +36,18 @@ function SupportPage() {
       <PageHero
         eyebrow="Assistência técnica"
         title={<>Seu equipamento <span className="text-primary">de volta ao trabalho.</span></>}
-        description={`Fale direto com nosso técnico pelo WhatsApp ${CONTACTS.tecnico.display}.`}
+        description={`Fale direto com nosso técnico pelo WhatsApp ${CONTACTS.tecnico.display} ou por e-mail ${CONTACTS.tecnico.email}.`}
         image={technicianImg}
         imageAlt="Técnico consertando impressora térmica"
       >
         <Button asChild variant="hero" size="xl">
           <a href={whatsappLink("tecnico")} target="_blank" rel="noopener noreferrer">
             <WhatsAppIcon className="size-5" /> Chamar o técnico
+          </a>
+        </Button>
+        <Button asChild variant="ink" size="xl" className="border border-border">
+          <a href={emailLink("tecnico")}>
+            <Mail className="size-5" /> Enviar e-mail
           </a>
         </Button>
       </PageHero>

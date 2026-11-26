@@ -419,7 +419,7 @@ function Index() {
             align="center"
             eyebrow="Atendimento"
             title="Fale com a pessoa certa"
-            description="Dois canais diretos no WhatsApp: um para vendas e outro para suporte técnico."
+            description="WhatsApp ou e-mail, com um time para vendas e outro para suporte técnico."
           />
           <ContactCards tone="paper" className="mx-auto mt-12 max-w-4xl" />
         </div>

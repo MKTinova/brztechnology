@@ -1,5 +1,14 @@
 import { describe, expect, it } from "vitest";
-import { buildQuoteMessage, RENTAL_MONTHS, type QuoteRequest } from "@/lib/contact";
+import {
+  buildQuoteMessage,
+  CONTACTS,
+  emailLink,
+  productEmailLink,
+  quoteEmailLink,
+  RENTAL_MONTHS,
+  whatsappLink,
+  type QuoteRequest,
+} from "@/lib/contact";
 
 const quote: QuoteRequest = {
   mode: "alugar",
@@ -23,5 +32,42 @@ describe("Rental quote duration", () => {
 
   it("does not send a rental term for purchases", () => {
     expect(buildQuoteMessage({ ...quote, mode: "comprar", rentalMonths: 48 })).not.toContain("Prazo de aluguel");
+  });
+});
+
+describe("E-mail channel", () => {
+  const emailShape = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  it("gives both teams their own e-mail address", () => {
+    expect(CONTACTS.vendas.email).toMatch(emailShape);
+    expect(CONTACTS.tecnico.email).toMatch(emailShape);
+    expect(CONTACTS.vendas.email).not.toBe(CONTACTS.tecnico.email);
+  });
+
+  it("opens a mailto draft with a subject and a body", () => {
+    const link = emailLink("vendas");
+    expect(link.startsWith(`mailto:${CONTACTS.vendas.email}?subject=`)).toBe(true);
+    expect(link).toContain("&body=");
+  });
+
+  it("percent-encodes spaces so mail clients show readable text", () => {
+    const link = emailLink("tecnico", "Suporte técnico — BRZ Technology");
+    expect(link).not.toContain("+");
+    expect(link).toContain("Suporte%20t%C3%A9cnico");
+  });
+
+  it("sends the quote by e-mail with the same rental term as WhatsApp", () => {
+    const request = { ...quote, rentalMonths: 24 } as const;
+    const link = quoteEmailLink(request);
+    expect(link.startsWith(`mailto:${CONTACTS.vendas.email}?subject=`)).toBe(true);
+    expect(decodeURIComponent(link.split("&body=")[1] ?? "")).toContain("• Prazo de aluguel: 24 meses");
+    expect(decodeURIComponent(link.split("&body=")[1] ?? "")).toBe(buildQuoteMessage(request));
+  });
+
+  it("keeps the two channels pointing at the same teams", () => {
+    expect(whatsappLink("vendas")).toContain(CONTACTS.vendas.number);
+    expect(emailLink("tecnico")).toContain(CONTACTS.tecnico.email);
+    expect(productEmailLink("Zebra ZD621", "alugar").startsWith(`mailto:${CONTACTS.vendas.email}?subject=`)).toBe(true);
+    expect(decodeURIComponent(productEmailLink("Zebra ZD621", "alugar"))).toContain("Zebra ZD621");
   });
 });

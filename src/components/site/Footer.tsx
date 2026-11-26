@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { CONTACTS, whatsappLink } from "@/lib/contact";
+import { Mail } from "lucide-react";
+import { CONTACTS, emailLink, whatsappLink } from "@/lib/contact";
 import { Logo } from "./Logo";
 import { NAV } from "./Header";
 import { WhatsAppIcon } from "./WhatsAppIcon";
@@ -44,9 +45,7 @@ export function Footer() {
         </div>
 
         <div className="md:col-span-4">
-          <h3 className="text-sm font-semibold uppercase tracking-widest text-foreground">
-            Atendimento via WhatsApp
-          </h3>
+          <h3 className="text-sm font-semibold uppercase tracking-widest text-foreground">Atendimento</h3>
           <ul className="mt-5 space-y-3">
             {(["vendas", "tecnico"] as const).map((role) => (
               <li key={role}>
@@ -61,9 +60,32 @@ export function Footer() {
                   </span>
                   <span className="flex flex-col">
                     <span className="text-xs uppercase tracking-wider text-muted-foreground">
-                      {CONTACTS[role].label}
+                      WhatsApp {CONTACTS[role].label}
                     </span>
                     <span className="text-sm font-semibold text-foreground">{CONTACTS[role].display}</span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            Ou por e-mail
+          </p>
+          <ul className="mt-3 space-y-2">
+            {(["vendas", "tecnico"] as const).map((role) => (
+              <li key={role}>
+                <a
+                  href={emailLink(role)}
+                  className="group flex items-center gap-3 rounded-xl border border-border p-3 transition-colors hover:border-primary/50"
+                >
+                  <span className="grid size-9 place-items-center rounded-full bg-primary/15 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                    <Mail className="size-4" />
+                  </span>
+                  <span className="flex flex-col">
+                    <span className="text-xs uppercase tracking-wider text-muted-foreground">
+                      E-mail {CONTACTS[role].label}
+                    </span>
+                    <span className="text-sm font-semibold text-foreground">{CONTACTS[role].email}</span>
                   </span>
                 </a>
               </li>

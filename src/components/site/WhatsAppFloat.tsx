@@ -1,7 +1,7 @@
-import { MessageCircle, Wrench, X } from "lucide-react";
+import { Mail, MessageCircle, Wrench, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { CONTACTS, whatsappLink, type ContactRole } from "@/lib/contact";
+import { CONTACTS, emailLink, whatsappLink, type ContactRole } from "@/lib/contact";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const ROLES: ContactRole[] = ["vendas", "tecnico"];
@@ -71,6 +71,24 @@ export function WhatsAppFloat() {
             );
           })}
         </ul>
+        <div className="border-t border-border px-3 pb-3 pt-2">
+          <p className="text-[0.65rem] font-semibold uppercase tracking-wider text-muted-foreground">
+            Prefere e-mail?
+          </p>
+          <div className="mt-1.5 grid gap-1">
+            {ROLES.map((role) => (
+              <a
+                key={role}
+                href={emailLink(role)}
+                tabIndex={open ? 0 : -1}
+                className="flex items-center gap-2 rounded-lg px-2 py-1.5 text-xs text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+              >
+                <Mail className="size-3.5 shrink-0 text-primary" />
+                <span className="truncate">{CONTACTS[role].email}</span>
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
 
       <button
