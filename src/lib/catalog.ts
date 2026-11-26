@@ -12,6 +12,7 @@ import zd621 from "@/assets/printer-zebra-zd621.jpg";
 import rp4 from "@/assets/printer-honeywell-rp4.jpg";
 import pm45 from "@/assets/printer-honeywell-pm45.jpg";
 import l42pro from "@/assets/printer-elgin-l42pro.jpg";
+import os214pro from "@/assets/printer-argox-os214pro.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -158,7 +159,7 @@ export const PRINTERS: Product[] = [
     brand: "Argox",
     kind: "impressora",
     type: "Desktop",
-    image: desktop,
+    image: os214pro,
     summary: "Clássica de mesa, econômica e confiável para o dia a dia.",
     specs: ["Transferência térmica", "203 dpi", "USB"],
     modes: ["comprar", "alugar"],
