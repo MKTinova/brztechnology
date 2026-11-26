@@ -142,7 +142,7 @@ export const PRINTERS: Product[] = [
   },
   {
     id: "argox-ix4-250",
-    name: "Argox iX4-250",
+    name: "Argox iX4-250 Pro",
     brand: "Argox",
     kind: "impressora",
     type: "Industrial",
