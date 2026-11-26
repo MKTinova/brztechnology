@@ -123,7 +123,7 @@ export const PRINTERS: Product[] = [
   },
   {
     id: "honeywell-pc42t",
-    name: "Honeywell PC42t",
+    name: "Honeywell PC42E-T",
     brand: "Honeywell",
     kind: "impressora",
     type: "Desktop",
