@@ -22,6 +22,7 @@ import tc22 from "@/assets/collector-zebra-tc22.jpg";
 import tc21 from "@/assets/collector-zebra-tc21.jpg";
 import tc52 from "@/assets/collector-zebra-tc52.jpg";
 import eda52 from "@/assets/collector-honeywell-eda52.jpg";
+import ct40 from "@/assets/collector-honeywell-ct40.jpg";
 
 export type Brand = "Zebra" | "Honeywell" | "Argox" | "Elgin";
 export type ProductKind = "impressora" | "coletor";
@@ -270,7 +271,7 @@ export const COLLECTORS: Product[] = [
     brand: "Honeywell",
     kind: "coletor",
     type: "Touch",
-    image: collector,
+    image: ct40,
     summary: "Coletor corporativo resistente para operação o dia inteiro.",
     specs: ["Android", "Tela touch", "Bateria substituível"],
     modes: ["comprar", "alugar"],
